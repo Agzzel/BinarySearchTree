@@ -1,10 +1,6 @@
 /**
- * Denna klass representerar ett binärt sökträd. Ni får inte ändra *NÅGOT* i
- * denna klass förutom paketet om du vill använda ett sådant. Alla ändringar
- * som krävs för att klassen ska fungera ska göras i BinarySearchTreeNode.
- *
- * @author henrikbe
- *
+This is the class for the binary search tree that was provided by the teacher.
+ No modifications have been made for this class.
  */
 public class BinarySearchTree<T extends Comparable<T>> {
 

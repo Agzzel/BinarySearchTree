@@ -1,35 +1,3 @@
-/**
- * Axel Sterner axst3162
- * Egil Österlind egae8586
- * Hanna Rudöfors haru3801
- *
- * Detta är den enda av de tre klasserna ni ska göra några ändringar i. (Om ni
- * inte vill lägga till fler testfall.) Det är också den enda av klasserna ni
- * ska lämna in. Glöm inte att namn och användarnamn ska stå i en kommentar
- * högst upp, och att en eventuell paketdeklarationen måste plockas bort vid inlämningen för
- * att koden ska gå igenom de automatiska testerna.
- * <p>
- * De ändringar som är tillåtna är begränsade av följande:
- * <ul>
- * <li>Ni får INTE byta namn på klassen.
- * <li>Ni får INTE lägga till några fler instansvariabler.
- * <li>Ni får INTE lägga till några statiska variabler.
- * <li>Ni får INTE använda några loopar någonstans. Detta gäller också alterntiv
- * till loopar, så som strömmar.
- * <li>Ni FÅR lägga till fler metoder, dessa ska då vara privata.
- * <li>Ni får INTE låta NÅGON metod ta en parameter av typen
- * BinarySearchTreeNode. Enbart den generiska typen (T eller vad ni väljer att
- * kalla den), String, StringBuilder, StringBuffer, samt primitiva typer är
- * tillåtna.
- * </ul>
- *
- * @param <T>
- * @author henrikbe
- */
-//@SuppressWarnings("unused") // Denna rad ska plockas bort. Den finns här
-// tillfälligt för att vi inte ska tro att det är
-// fel i koden. Varningar ska normalt inte döljas på
-// detta sätt, de är (oftast) fel som ska fixas.
 public class BinarySearchTreeNode<T extends Comparable<T>> {
 
     private T data;
@@ -78,13 +46,13 @@ public class BinarySearchTreeNode<T extends Comparable<T>> {
             if (left == null && right == null) { // Är också ett löv.
                 return null;
             }
-            if (left != null && right == null) { // Ett barn till vänster
+            if (left != null && right == null) { //Found a child to the left node
                 return left;
             }
-            if (left == null){ // Ett barn
+            if (left == null){ // one child
                 return right;
             }
-            // Vi vet att det finns två barn.
+            //Now we know there are two children
             this.data = right.findMin();
             this.right = right.remove(this.data);
 
@@ -101,7 +69,7 @@ public class BinarySearchTreeNode<T extends Comparable<T>> {
         if (compareToResult == 0) {
             return true;
         }
-        // Kollar först så att datan inte är null
+        // Check so that the data is not null
         if (right != null && compareToResult > 0) {
             return right.contains(data);
         }
@@ -117,7 +85,7 @@ public class BinarySearchTreeNode<T extends Comparable<T>> {
     }
 
 
-    public int depth() {// Vänster led jämföra med högerled.
+    public int depth() {// The left side is compared to the right side
         int l = -1;
         int r = -1;
         if (left != null) {

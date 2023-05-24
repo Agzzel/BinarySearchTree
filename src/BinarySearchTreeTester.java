@@ -8,12 +8,7 @@ import org.junit.jupiter.api.*;
 
 
 /**
- * Denna klass testar bara de funktionella kraven. Eventuellt kommer det att
- * tillkomma test på en del av de icke-funktionella. Det kan alltså vara värt
- * att kontrollera om det kommit uppdaterade testfall någon dag innan deadline.
- *
- * @author henrikbe
- * @version JUnit 5
+ This class is for testing the implementation and was provided by the teacher.
  */
 public class BinarySearchTreeTester {
 
